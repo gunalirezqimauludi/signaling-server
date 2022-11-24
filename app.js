@@ -5,9 +5,6 @@ const app = express()
 const port = process.env.PORT || 8000;
 const server = http.createServer(app)
 const io = socketIO(server, {
-    path: "/socket.io",
-    pingInterval: 10 * 1000,
-    pingTimeout: 5000,
     transports: ["websocket"],
     cors: {
         origin : '*'
